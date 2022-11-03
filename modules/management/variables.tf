@@ -1,6 +1,7 @@
 variable "org_name" {
   type        = string
   description = "Org Name"
+  default     = {}
 }
 
 variable "project_names" {
@@ -18,11 +19,13 @@ variable "group_name" {
 variable "m_groups" {
   type        = map(any)
   description = "mapping variable"
+  default     = {}
 }
 
 variable "global_id" {
   type        = string
   description = "mapping variable"
+  default     = {}
 }
 
 variable "vault_pub_url" {
@@ -32,19 +35,22 @@ variable "vault_pub_url" {
 }
 
 variable "credential_store_vault" {
-  type = map(any)
+  type    = map(any)
+  default = {}
 }
 
 variable "static_hosts" {
-  type = map(any)
+  type    = map(any)
+  default = {}
 
 }
 
 variable "credential_lib" {
-  type = map(any)
+  type    = map(any)
+  default = {}
 }
 
 variable "targets" {
-  type = map(any)
-
+  type    = map(any)
+  default = {}
 }

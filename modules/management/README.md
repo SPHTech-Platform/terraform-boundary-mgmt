@@ -69,8 +69,8 @@ No outputs.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | 1.1.2 |
-| <a name="provider_vault"></a> [vault](#provider\_vault) | 3.9.1 |
+| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | ~> 1.1.2 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 3.9.1 |
 
 ## Modules
 
@@ -98,15 +98,15 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_credential_lib"></a> [credential\_lib](#input\_credential\_lib) | n/a | `map(any)` | n/a | yes |
-| <a name="input_credential_store_vault"></a> [credential\_store\_vault](#input\_credential\_store\_vault) | n/a | `map(any)` | n/a | yes |
-| <a name="input_global_id"></a> [global\_id](#input\_global\_id) | mapping variable | `string` | n/a | yes |
+| <a name="input_credential_lib"></a> [credential\_lib](#input\_credential\_lib) | n/a | `map(any)` | `{}` | no |
+| <a name="input_credential_store_vault"></a> [credential\_store\_vault](#input\_credential\_store\_vault) | n/a | `map(any)` | `{}` | no |
+| <a name="input_global_id"></a> [global\_id](#input\_global\_id) | mapping variable | `string` | `{}` | no |
 | <a name="input_group_name"></a> [group\_name](#input\_group\_name) | Provide the list of the group, it should be a subset of m\_groups | `list(string)` | `[]` | no |
-| <a name="input_m_groups"></a> [m\_groups](#input\_m\_groups) | mapping variable | `map(any)` | n/a | yes |
-| <a name="input_org_name"></a> [org\_name](#input\_org\_name) | Org Name | `string` | n/a | yes |
+| <a name="input_m_groups"></a> [m\_groups](#input\_m\_groups) | mapping variable | `map(any)` | `{}` | no |
+| <a name="input_org_name"></a> [org\_name](#input\_org\_name) | Org Name | `string` | `{}` | no |
 | <a name="input_project_names"></a> [project\_names](#input\_project\_names) | (optional) list of project environments inside the org. | `list(string)` | `[]` | no |
-| <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | n/a | `map(any)` | n/a | yes |
-| <a name="input_targets"></a> [targets](#input\_targets) | n/a | `map(any)` | n/a | yes |
+| <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | n/a | `map(any)` | `{}` | no |
+| <a name="input_targets"></a> [targets](#input\_targets) | n/a | `map(any)` | `{}` | no |
 | <a name="input_vault_pub_url"></a> [vault\_pub\_url](#input\_vault\_pub\_url) | Vault Server public URL | `string` | `"https://main.vault.0cbdb520-5871-4f8a-b02b-81e27b14da3f.aws.hashicorp.cloud:8200/"` | no |
 
 ## Outputs
