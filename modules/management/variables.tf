@@ -1,28 +1,7 @@
-variable "org_name" {
-  type        = string
-  description = "Org Name"
-}
-
-variable "project_names" {
-  type        = list(string)
-  description = "(optional) list of project environments inside the org."
-  default     = []
-}
-
-variable "group_name" {
-  type        = list(string)
-  description = "Provide the list of the group, it should be a subset of m_groups"
-  default     = []
-}
-
-variable "m_groups" {
+variable "projects" {
   type        = map(any)
-  description = "mapping variable"
-}
-
-variable "global_id" {
-  type        = string
-  description = "mapping variable"
+  description = "(optional) Map of project environments inside the org."
+  default     = {}
 }
 
 variable "vault_pub_url" {
@@ -32,19 +11,22 @@ variable "vault_pub_url" {
 }
 
 variable "credential_store_vault" {
-  type = map(any)
+  type    = map(any)
+  default = {}
 }
 
 variable "static_hosts" {
-  type = map(any)
+  type    = map(any)
+  default = {}
 
 }
 
 variable "credential_lib" {
-  type = map(any)
+  type    = map(any)
+  default = {}
 }
 
 variable "targets" {
-  type = map(any)
-
+  type    = map(any)
+  default = {}
 }
