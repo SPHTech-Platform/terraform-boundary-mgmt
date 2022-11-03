@@ -55,8 +55,9 @@ resource "boundary_credential_store_vault" "this" {
   description = "${each.key}-vault-credential-store"
   address     = var.vault_pub_url
   token       = vault_token.boundary[each.key].client_token
-  scope_id    = boundary_scope.projects[each.key].id
-  namespace   = each.value.namespace
+  #scope_id    = boundary_scope.projects[each.key].id
+  scope_id  = lookup(var.projects, each.key).id
+  namespace = each.value.namespace
 }
 
 

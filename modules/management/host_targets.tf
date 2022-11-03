@@ -17,7 +17,7 @@ resource "boundary_host_catalog_static" "this" {
   for_each    = local.unq_env
   name        = "${each.key}-static"
   description = "Static Hosts Catalog for ${each.key}"
-  scope_id    = boundary_scope.projects[each.key].id
+  scope_id    = lookup(var.projects, each.key).id
 }
 
 resource "boundary_host_static" "this" {
@@ -48,7 +48,7 @@ resource "boundary_target" "this" {
   description  = "Target for ${each.value.name}"
   type         = each.value.type
   default_port = each.value.port
-  scope_id     = boundary_scope.projects[each.key].id
+  scope_id     = lookup(var.projects, each.key).id
   host_source_ids = [
     for i in boundary_host_set_static.this : i.id if contains(each.value.ss-name, i.name)
   ]
