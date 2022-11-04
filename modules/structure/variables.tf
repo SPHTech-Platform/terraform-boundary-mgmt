@@ -23,4 +23,5 @@ variable "m_groups" {
 variable "global_id" {
   type        = string
   description = "mapping variable"
+  default     = ""
 }
