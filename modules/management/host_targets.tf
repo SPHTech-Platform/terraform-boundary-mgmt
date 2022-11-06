@@ -48,12 +48,17 @@ resource "boundary_target" "this" {
   description  = "Target for ${each.value.name}"
   type         = each.value.type
   default_port = each.value.port
-  scope_id     = lookup(var.projects, each.key).id
+  scope_id     = lookup(var.projects, each.value.project).id
   host_source_ids = [
     for i in boundary_host_set_static.this : i.id if contains(each.value.ss-name, i.name)
   ]
+
   injected_application_credential_source_ids = [
-    for i in boundary_credential_library_vault.this : i.id if contains(each.value.cred_lib, i.name)
+    for i in boundary_credential_library_vault.this : i.id if contains(each.value.inj_cred_lib, i.name)
   ]
+  brokered_credential_source_ids = [
+    for i in boundary_credential_library_vault.this : i.id if contains(each.value.brk_cred_lib, i.name)
+  ]
+
   worker_filter = "\"${each.value.worker_name}\" in \"/tags/name\""
 }
