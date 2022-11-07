@@ -19,7 +19,9 @@ resource "boundary_role" "proj_admin" {
   scope_id       = boundary_scope.org.id
   grant_scope_id = boundary_scope.projects[each.key].id
   grant_strings = [
-    "id=*;type=*;actions=*"
+    "id=*;type=target;actions=read,authorize-session",
+    "id=*;type=target;actions=list,no-op",
+    "id=*;type=auth-token;actions=list,read:self,delete:self",
   ]
 
   principal_ids = concat(
