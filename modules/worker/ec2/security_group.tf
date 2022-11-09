@@ -1,6 +1,8 @@
 resource "aws_security_group" "boundary_sg" {
-  name   = "boundary_worker_sg"
-  vpc_id = data.aws_subnet.pub_subnet.vpc_id
+  name        = "boundary_worker_sg"
+  description = "SG for Boundary Worker connection from the client from Internet"
+  vpc_id      = data.aws_subnet.pub_subnet.vpc_id
+
   ingress {
     description = "Boundary Worker Proxy"
     from_port   = 9202
