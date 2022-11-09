@@ -1,4 +1,4 @@
-module "ec2-boundary-worker" {
+module "ec2_boundary_worker" {
   source                      = "terraform-aws-modules/ec2-instance/aws"
   version                     = "4.2.0"
   ami                         = var.ami
@@ -7,12 +7,12 @@ module "ec2-boundary-worker" {
   name                        = var.instance_name
   subnet_id                   = data.aws_subnet.pub_subnet.id
   tags = {
-    "Name" = "${var.instance_name}"
-    "Env"  = "${var.env}"
+    "Name" = var.instance_name
+    "Env"  = var.env
   }
   volume_tags = {
-    "Name" = "${var.instance_name}"
-    "Env"  = "${var.env}"
+    "Name" = var.instance_name
+    "Env"  = var.env
   }
 
   vpc_security_group_ids = [aws_security_group.boundary_sg.id]

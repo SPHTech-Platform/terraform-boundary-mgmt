@@ -1,32 +1,44 @@
 variable "pub_enable" {
-  default = true
+  type        = string
+  description = "To enable pub IP"
+  default     = true
 }
 
 variable "ami" {
-  default = "ami-094bbd9e922dc515d"
+  type        = string
+  description = "AMI ID"
+  default     = "ami-094bbd9e922dc515d"
 }
 
 variable "instance_type" {
-  default = "t2.medium"
+  type        = string
+  description = "Instance Type"
+  default     = "t2.medium"
 }
 
 variable "instance_name" {
-  type    = string
-  default = "boundary-worker"
+  type        = string
+  description = "instance name"
+  default     = "boundary-worker"
 }
 
 variable "env" {
-  default = "dev"
+  type        = string
+  description = "Env"
+  default     = "dev"
 }
 
 variable "hcp_boundary_cluster_id" {
-  type    = string
-  default = "256bed8b-62b8-4e09-a4df-23a79921dc40"
+  description = "HCP ID"
+  type        = string
+  default     = "256bed8b-62b8-4e09-a4df-23a79921dc40"
 }
 
 variable "activation_token" {
-  type = string
+  description = "activation token"
+  type        = string
 }
 variable "worker_tag" {
-  type = string
+  description = "worker_tag"
+  type        = string
 }

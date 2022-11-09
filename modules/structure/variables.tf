@@ -19,9 +19,3 @@ variable "m_groups" {
   description = "mapping variable"
   default     = {}
 }
-
-variable "global_id" {
-  type        = string
-  description = "mapping variable"
-  default     = ""
-}
