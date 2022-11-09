@@ -1,3 +1,4 @@
+#checkov:skip=CKV2_AWS_5
 resource "aws_security_group" "boundary_sg" {
   name        = "boundary_worker_sg"
   description = "SG for Boundary Worker connection from the client from Internet"
