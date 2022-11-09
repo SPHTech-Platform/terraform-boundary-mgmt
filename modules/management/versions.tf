@@ -1,10 +1,7 @@
 terraform {
   required_version = "~> 1.3.0"
   required_providers {
-    hcp = {
-      source  = "hashicorp/hcp"
-      version = "~> 0.47.0"
-    }
+
 
     boundary = {
       source  = "hashicorp/boundary"

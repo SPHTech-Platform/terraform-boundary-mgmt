@@ -11,22 +11,26 @@ variable "vault_pub_url" {
 }
 
 variable "credential_store_vault" {
-  type    = map(any)
-  default = {}
+  description = "credential_store_vault"
+  type        = map(any)
+  default     = {}
 }
 
 variable "static_hosts" {
-  type    = map(any)
-  default = {}
+  description = "static_hosts"
+  type        = map(any)
+  default     = {}
 
 }
 
 variable "credential_lib" {
-  type    = map(any)
-  default = {}
+  description = "credential_lib"
+  type        = map(any)
+  default     = {}
 }
 
 variable "targets" {
-  type    = map(any)
-  default = {}
+  description = "targets"
+  type        = map(any)
+  default     = {}
 }
