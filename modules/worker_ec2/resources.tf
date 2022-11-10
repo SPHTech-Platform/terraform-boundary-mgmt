@@ -4,7 +4,7 @@ module "ec2_boundary_worker" {
   ami                         = var.ami
   associate_public_ip_address = var.pub_enable
   instance_type               = var.instance_type
-  name                        = var.instance_name
+  name                        = "${var.env}-${var.instance_name}"
   subnet_id                   = data.aws_subnet.pub_subnet.id
   tags = {
     "Name" = var.instance_name
