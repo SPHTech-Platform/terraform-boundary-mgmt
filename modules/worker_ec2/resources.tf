@@ -7,11 +7,11 @@ module "ec2_boundary_worker" {
   name                        = "${var.env}-${var.instance_name}"
   subnet_id                   = data.aws_subnet.pub_subnet.id
   tags = {
-    "Name" = var.instance_name
+    "Name" = "${var.env}-${var.instance_name}"
     "Env"  = var.env
   }
   volume_tags = {
-    "Name" = var.instance_name
+    "Name" = "${var.env}-${var.instance_name}"
     "Env"  = var.env
   }
 
