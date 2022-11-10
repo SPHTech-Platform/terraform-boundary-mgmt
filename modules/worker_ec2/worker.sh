@@ -17,4 +17,7 @@ EOF
 chmod +x worker-start.sh
 chown -R ec2-user:ec2-user /home/ec2-user
 echo 'runuser -l ec2-user -c "/home/ec2-user/worker-start.sh 2>&1 | tee /tmp/start-worker.logs &"' | at now +3 minutes
-echo 'runuser -l ec2-user -c "/home/ec2-user/boundary-worker server -config=worker-config.hcl 2>&1 | tee /tmp/boundary-worker.logs &"' | at now +5 minutes
+echo 'runuser -l ec2-user -c "/home/ec2-user/boundary-worker server -config=/home/ec2-user/worker-config.hcl 2>&1 | tee /tmp/boundary-worker.logs &"' | at now +5 minutes
+echo 'runuser -l ec2-user -c "/home/ec2-user/boundary-worker server -config=/home/ec2-user/worker-config.hcl 2>&1 | tee /tmp/boundary-worker.logs &"' | at now +3 minutes >> /etc/rc.d/rc.local
+echo "home/ec2-user/boundary-worker server -config=/home/ec2-user/worker-config.hcl 2>&1 | tee /tmp/boundary-worker.logs &" >> /etc/rc.d/rc.local
+chmod +x /etc/rc.d/rc.local
