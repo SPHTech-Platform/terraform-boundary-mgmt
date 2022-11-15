@@ -29,11 +29,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_global_id"></a> [global\_id](#input\_global\_id) | mapping variable | `string` | `""` | no |
 | <a name="input_group_name"></a> [group\_name](#input\_group\_name) | Provide the list of the group, it should be a subset of m\_groups | `list(string)` | `[]` | no |
 | <a name="input_m_groups"></a> [m\_groups](#input\_m\_groups) | mapping variable | `map(any)` | `{}` | no |
 | <a name="input_org_name"></a> [org\_name](#input\_org\_name) | Org Name | `string` | n/a | yes |
-| <a name="input_project_names"></a> [project\_names](#input\_project\_names) | (optional) list of project environments inside the org. | `list(string)` | n/a | yes |
+| <a name="input_project_names"></a> [project\_names](#input\_project\_names) | list of project environments inside the org. | `list(string)` | n/a | yes |
 
 ## Outputs
 
@@ -74,7 +73,7 @@ No modules.
 | <a name="input_group_name"></a> [group\_name](#input\_group\_name) | Provide the list of the group, it should be a subset of m\_groups | `list(string)` | `[]` | no |
 | <a name="input_m_groups"></a> [m\_groups](#input\_m\_groups) | mapping variable | `map(any)` | `{}` | no |
 | <a name="input_org_name"></a> [org\_name](#input\_org\_name) | Org Name | `string` | n/a | yes |
-| <a name="input_project_names"></a> [project\_names](#input\_project\_names) | (optional) list of project environments inside the org. | `list(string)` | n/a | yes |
+| <a name="input_project_names"></a> [project\_names](#input\_project\_names) | list of project environments inside the org. | `list(string)` | n/a | yes |
 
 ## Outputs
 

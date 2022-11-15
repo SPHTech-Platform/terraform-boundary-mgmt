@@ -1,36 +1,36 @@
 variable "projects" {
   type        = map(any)
-  description = "(optional) Map of project environments inside the org."
+  description = "Map of project environments inside the org."
   default     = {}
 }
 
 variable "vault_pub_url" {
   type        = string
   description = "Vault Server public URL"
-  default     = "https://main.vault.0cbdb520-5871-4f8a-b02b-81e27b14da3f.aws.hashicorp.cloud:8200/"
+  default     = ""
 }
 
 variable "credential_store_vault" {
-  description = "credential_store_vault"
+  description = "credential_store_vault project and vault namespace. A seperate authetication needs to be provided for vault."
   type        = map(any)
   default     = {}
 }
 
 variable "static_hosts" {
-  description = "static_hosts"
+  description = "To create a Host Catalog, a Host Set and attach a Host provided inside a Project."
   type        = map(any)
   default     = {}
 
 }
 
 variable "credential_lib" {
-  description = "credential_lib"
+  description = "To creates a Credential Lib in the Project"
   type        = map(any)
   default     = {}
 }
 
 variable "targets" {
-  description = "targets"
+  description = "To creates a Targets of a given type within a Project"
   type        = map(any)
   default     = {}
 }

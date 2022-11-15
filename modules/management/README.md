@@ -5,7 +5,6 @@
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3.0 |
 | <a name="requirement_boundary"></a> [boundary](#requirement\_boundary) | ~> 1.1.2 |
-| <a name="requirement_hcp"></a> [hcp](#requirement\_hcp) | ~> 0.47.0 |
 | <a name="requirement_vault"></a> [vault](#requirement\_vault) | ~> 3.9.1 |
 
 ## Providers
@@ -37,12 +36,12 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_credential_lib"></a> [credential\_lib](#input\_credential\_lib) | n/a | `map(any)` | `{}` | no |
-| <a name="input_credential_store_vault"></a> [credential\_store\_vault](#input\_credential\_store\_vault) | n/a | `map(any)` | `{}` | no |
-| <a name="input_projects"></a> [projects](#input\_projects) | (optional) Map of project environments inside the org. | `map(any)` | `{}` | no |
-| <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | n/a | `map(any)` | `{}` | no |
-| <a name="input_targets"></a> [targets](#input\_targets) | n/a | `map(any)` | `{}` | no |
-| <a name="input_vault_pub_url"></a> [vault\_pub\_url](#input\_vault\_pub\_url) | Vault Server public URL | `string` | `"https://main.vault.0cbdb520-5871-4f8a-b02b-81e27b14da3f.aws.hashicorp.cloud:8200/"` | no |
+| <a name="input_credential_lib"></a> [credential\_lib](#input\_credential\_lib) | To creates a Credential Lib in the Project | `map(any)` | `{}` | no |
+| <a name="input_credential_store_vault"></a> [credential\_store\_vault](#input\_credential\_store\_vault) | credential\_store\_vault project and vault namespace. A seperate authetication needs to be provided for vault. | `map(any)` | `{}` | no |
+| <a name="input_projects"></a> [projects](#input\_projects) | Map of project environments inside the org. | `map(any)` | `{}` | no |
+| <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | To create a Host Catalog, a Host Set and attach a Host provided inside a Project. | `map(any)` | `{}` | no |
+| <a name="input_targets"></a> [targets](#input\_targets) | To creates a Targets of a given type within a Project | `map(any)` | `{}` | no |
+| <a name="input_vault_pub_url"></a> [vault\_pub\_url](#input\_vault\_pub\_url) | Vault Server public URL | `string` | `""` | no |
 
 ## Outputs
 
@@ -85,12 +84,12 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_credential_lib"></a> [credential\_lib](#input\_credential\_lib) | credential\_lib | `map(any)` | `{}` | no |
-| <a name="input_credential_store_vault"></a> [credential\_store\_vault](#input\_credential\_store\_vault) | credential\_store\_vault | `map(any)` | `{}` | no |
-| <a name="input_projects"></a> [projects](#input\_projects) | (optional) Map of project environments inside the org. | `map(any)` | `{}` | no |
-| <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | static\_hosts | `map(any)` | `{}` | no |
-| <a name="input_targets"></a> [targets](#input\_targets) | targets | `map(any)` | `{}` | no |
-| <a name="input_vault_pub_url"></a> [vault\_pub\_url](#input\_vault\_pub\_url) | Vault Server public URL | `string` | `"https://main.vault.0cbdb520-5871-4f8a-b02b-81e27b14da3f.aws.hashicorp.cloud:8200/"` | no |
+| <a name="input_credential_lib"></a> [credential\_lib](#input\_credential\_lib) | To creates a Credential Lib in the Project | `map(any)` | `{}` | no |
+| <a name="input_credential_store_vault"></a> [credential\_store\_vault](#input\_credential\_store\_vault) | credential\_store\_vault project and vault namespace. A seperate authetication needs to be provided for vault. | `map(any)` | `{}` | no |
+| <a name="input_projects"></a> [projects](#input\_projects) | Map of project environments inside the org. | `map(any)` | `{}` | no |
+| <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | To create a Host Catalog, a Host Set and attach a Host provided inside a Project. | `map(any)` | `{}` | no |
+| <a name="input_targets"></a> [targets](#input\_targets) | To creates a Targets of a given type within a Project | `map(any)` | `{}` | no |
+| <a name="input_vault_pub_url"></a> [vault\_pub\_url](#input\_vault\_pub\_url) | Vault Server public URL | `string` | `""` | no |
 
 ## Outputs
 

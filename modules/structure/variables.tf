@@ -5,7 +5,7 @@ variable "org_name" {
 
 variable "project_names" {
   type        = list(string)
-  description = "(optional) list of project environments inside the org."
+  description = "list of project environments inside the org."
 }
 
 variable "group_name" {
