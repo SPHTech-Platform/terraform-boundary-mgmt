@@ -32,14 +32,14 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_activation_token"></a> [activation\_token](#input\_activation\_token) | activation token | `string` | n/a | yes |
+| <a name="input_activation_token"></a> [activation\_token](#input\_activation\_token) | activation token, is a one time activation token created via controller | `string` | n/a | yes |
 | <a name="input_ami"></a> [ami](#input\_ami) | AMI ID | `string` | `"ami-094bbd9e922dc515d"` | no |
 | <a name="input_env"></a> [env](#input\_env) | Env | `string` | `"dev"` | no |
-| <a name="input_hcp_boundary_cluster_id"></a> [hcp\_boundary\_cluster\_id](#input\_hcp\_boundary\_cluster\_id) | HCP ID | `string` | `"256bed8b-62b8-4e09-a4df-23a79921dc40"` | no |
+| <a name="input_hcp_boundary_cluster_id"></a> [hcp\_boundary\_cluster\_id](#input\_hcp\_boundary\_cluster\_id) | HCP ID | `string` | `""` | no |
 | <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | instance name | `string` | `"boundary-worker"` | no |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | Instance Type | `string` | `"t2.medium"` | no |
 | <a name="input_pub_enable"></a> [pub\_enable](#input\_pub\_enable) | To enable pub IP | `string` | `true` | no |
-| <a name="input_worker_tag"></a> [worker\_tag](#input\_worker\_tag) | worker\_tag | `string` | n/a | yes |
+| <a name="input_worker_tag"></a> [worker\_tag](#input\_worker\_tag) | worker\_tag - this needs to match the respective target worker tag filter. | `string` | n/a | yes |
 
 ## Outputs
 
@@ -81,14 +81,14 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_activation_token"></a> [activation\_token](#input\_activation\_token) | activation token | `string` | n/a | yes |
+| <a name="input_activation_token"></a> [activation\_token](#input\_activation\_token) | activation token, is a one time activation token created via controller | `string` | n/a | yes |
 | <a name="input_ami"></a> [ami](#input\_ami) | AMI ID | `string` | `"ami-094bbd9e922dc515d"` | no |
 | <a name="input_env"></a> [env](#input\_env) | Env | `string` | `"dev"` | no |
-| <a name="input_hcp_boundary_cluster_id"></a> [hcp\_boundary\_cluster\_id](#input\_hcp\_boundary\_cluster\_id) | HCP ID | `string` | `"256bed8b-62b8-4e09-a4df-23a79921dc40"` | no |
+| <a name="input_hcp_boundary_cluster_id"></a> [hcp\_boundary\_cluster\_id](#input\_hcp\_boundary\_cluster\_id) | HCP ID | `string` | `""` | no |
 | <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | instance name | `string` | `"boundary-worker"` | no |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | Instance Type | `string` | `"t2.medium"` | no |
 | <a name="input_pub_enable"></a> [pub\_enable](#input\_pub\_enable) | To enable pub IP | `string` | `true` | no |
-| <a name="input_worker_tag"></a> [worker\_tag](#input\_worker\_tag) | worker\_tag | `string` | n/a | yes |
+| <a name="input_worker_tag"></a> [worker\_tag](#input\_worker\_tag) | worker\_tag - this needs to match the respective target worker tag filter. | `string` | n/a | yes |
 
 ## Outputs
 

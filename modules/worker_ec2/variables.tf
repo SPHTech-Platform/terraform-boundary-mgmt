@@ -7,7 +7,8 @@ variable "pub_enable" {
 variable "ami" {
   type        = string
   description = "AMI ID"
-  default     = "ami-094bbd9e922dc515d"
+  # Pub AWS AMI in ap-southeast-1
+  default = "ami-094bbd9e922dc515d"
 }
 
 variable "instance_type" {
@@ -31,14 +32,14 @@ variable "env" {
 variable "hcp_boundary_cluster_id" {
   description = "HCP ID"
   type        = string
-  default     = "256bed8b-62b8-4e09-a4df-23a79921dc40"
+  default     = ""
 }
 
 variable "activation_token" {
-  description = "activation token"
+  description = "activation token, is a one time activation token created via controller"
   type        = string
 }
 variable "worker_tag" {
-  description = "worker_tag"
+  description = "worker_tag - this needs to match the respective target worker tag filter."
   type        = string
 }
