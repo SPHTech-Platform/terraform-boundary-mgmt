@@ -59,8 +59,8 @@ No outputs.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | 1.1.2 |
-| <a name="provider_vault"></a> [vault](#provider\_vault) | 3.9.1 |
+| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | ~> 1.1.2 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 3.9.1 |
 
 ## Modules
 
