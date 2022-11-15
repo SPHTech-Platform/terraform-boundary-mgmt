@@ -26,4 +26,13 @@ module "example" {
       "namespace" = "admin/engr/example/dev"
     },
   }
+
+  credential_lib = {
+    "1" = {
+      "project" = "dev"
+      "path"    = "example/db/creds/example",
+      "type"    = "username_password",
+      "name"    = "dev-database-example-cred-lib",
+    }
+  }
 }
