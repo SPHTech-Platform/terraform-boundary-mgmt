@@ -41,6 +41,14 @@ on:
       TFE_TOKEN:
         description: Terraform Cloud Token
         required: false
+
+permissions:
+  actions: read
+  checks: read
+  contents: read
+  pull-requests: read
+  security-events: write
+
 env:
   TF_PLUGIN_CACHE_DIR: "/home/runner/.terraform.d/plugin-cache"
   TF_IN_AUTOMATION: "true"
