@@ -6,7 +6,7 @@ on:
       - local-skip-test
 jobs:
   ci:
-    uses: ./terraform.yaml
+    uses: ./.github/workflows/terraform.yaml
     with:
       upload_sarif: false
     secrets: inherit
