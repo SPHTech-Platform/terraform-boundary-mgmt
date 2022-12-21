@@ -3,10 +3,10 @@ on:
   pull_request:
   push:
     branches:
-      - main
+      - local-skip-test
 jobs:
   ci:
-    uses: SPHTech-Platform/reusable-workflows/.github/workflows/terraform.yaml@main
+    uses: ./terraform.yaml
     with:
       upload_sarif: false
     secrets: inherit
