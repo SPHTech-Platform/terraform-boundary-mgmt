@@ -12,7 +12,7 @@ permissions:
   security-events: write
 jobs:
   ci:
-    uses: ./ttf/terraform.yaml
+    uses: SPHTech-Platform/reusable-workflows/.github/workflows/terraform.yaml@main
     with:
       upload_sarif: false
     secrets: inherit
