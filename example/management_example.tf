@@ -1,6 +1,6 @@
 module "example" {
-  source   = "app.terraform.io/sph/mgmt/boundary//modules/management"
-  version  = "~> 0.1.7"
+  source = "../modules/management"
+  # version  = "~> 0.1.7"
   projects = { "dev" = { "id" = "123" } }
   static_hosts = {
     "dev" = {

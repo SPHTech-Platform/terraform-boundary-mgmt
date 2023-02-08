@@ -9,7 +9,7 @@ locals {
       owner       = "ec2-user:ec2-user"
       content = templatefile("${path.module}/worker-config.tpl", { hcp_boundary_cluster_id = var.hcp_boundary_cluster_id
         activation_token = var.activation_token
-        worker_tag       = var.worker_tag
+        worker_tags      = var.worker_tags
       })
   }]
 

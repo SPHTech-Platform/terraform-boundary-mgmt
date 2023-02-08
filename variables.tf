@@ -74,8 +74,8 @@ variable "hcp_boundary_cluster_id" {
   default     = ""
 }
 
-variable "worker_tag" {
-  description = "worker_tag - this needs to match the respective target worker tag filter."
+variable "worker_tags" {
+  description = "worker_tags - this needs to match the respective target worker tag filter."
   type        = string
 }
 
