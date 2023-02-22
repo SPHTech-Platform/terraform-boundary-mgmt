@@ -22,5 +22,5 @@ module "ec2_worker" {
   activation_token        = var.activation_token
   env                     = var.aws_env
   pub_enable              = var.pub_enable
-  worker_tag              = var.worker_tag
+  worker_tags             = var.worker_tags
 }

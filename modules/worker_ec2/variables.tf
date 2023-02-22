@@ -38,8 +38,10 @@ variable "hcp_boundary_cluster_id" {
 variable "activation_token" {
   description = "activation token, is a one time activation token created via controller"
   type        = string
+  sensitive   = true
 }
-variable "worker_tag" {
-  description = "worker_tag - this needs to match the respective target worker tag filter."
+variable "worker_tags" {
+  description = "worker_tags - this needs to match the respective target worker tag filter."
   type        = string
+  default     = ""
 }

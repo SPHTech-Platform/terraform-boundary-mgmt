@@ -13,6 +13,6 @@ worker {
   auth_storage_path = "/home/ec2-user/boundary/worker1"
   controller_generated_activation_token = "${activation_token}"
   tags {
-    name = ["${worker_tag}"]
+    name = ["${worker_tags}"]
   }
 }

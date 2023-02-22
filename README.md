@@ -38,13 +38,12 @@ No resources.
 | <a name="input_pub_enable"></a> [pub\_enable](#input\_pub\_enable) | To enable pub IP | `string` | `true` | no |
 | <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | To create a Host Catalog, a Host Set and attach a Host provided inside a Project. | `map(any)` | `{}` | no |
 | <a name="input_targets"></a> [targets](#input\_targets) | To creates a Targets of a given type within a Project | `map(any)` | `{}` | no |
-| <a name="input_worker_tag"></a> [worker\_tag](#input\_worker\_tag) | worker\_tag - this needs to match the respective target worker tag filter. | `string` | n/a | yes |
+| <a name="input_worker_tags"></a> [worker\_tags](#input\_worker\_tags) | worker\_tags - this needs to match the respective target worker tag filter. | `string` | n/a | yes |
 
 ## Outputs
 
 No outputs.
-<!-- END_TF_DOCS -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS --><!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -84,7 +83,7 @@ No resources.
 | <a name="input_pub_enable"></a> [pub\_enable](#input\_pub\_enable) | To enable pub IP | `string` | `true` | no |
 | <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | To create a Host Catalog, a Host Set and attach a Host provided inside a Project. | `map(any)` | `{}` | no |
 | <a name="input_targets"></a> [targets](#input\_targets) | To creates a Targets of a given type within a Project | `map(any)` | `{}` | no |
-| <a name="input_worker_tag"></a> [worker\_tag](#input\_worker\_tag) | worker\_tag - this needs to match the respective target worker tag filter. | `string` | n/a | yes |
+| <a name="input_worker_tags"></a> [worker\_tags](#input\_worker\_tags) | worker\_tags - this needs to match the respective target worker tag filter. | `string` | n/a | yes |
 
 ## Outputs
 
