@@ -14,7 +14,7 @@ locals {
     },
     {
       name  = "WORKER_TAGS"
-      value = var.worker_tags
+      value = "${var.name}-${var.env}"
     }
   ]
 }

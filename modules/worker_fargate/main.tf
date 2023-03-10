@@ -88,22 +88,6 @@ resource "aws_security_group" "ecs_sg" {
     cidr_blocks = [for s in data.aws_subnet.public : s.cidr_block]
   }
 
-  #   ingress {
-  #     description     = "Allow inbound traffic from the load balancer"
-  #     from_port       = 9202
-  #     to_port         = 9202
-  #     protocol        = "tcp"
-  #     security_groups = [aws_security_group.lb_sg.id]
-  #   }
-
-  #   ingress {
-  #     description = "Allow inbound traffic from NLB in private subnet"
-  #     from_port   = 3000
-  #     to_port     = 3000
-  #     protocol    = "tcp"
-  #     cidr_blocks = [for s in data.aws_subnet.private : s.cidr_block]
-  #   }
-
   egress {
     description = "Allow outbound traffic from ECS"
     from_port   = 0
@@ -117,8 +101,6 @@ module "boundary_cluster" {
   source  = "SPHTech-Platform/ecs/aws"
   version = "~> 0.2.0"
 
-  #   source = "../ecs"
-
   name                            = var.name
   launch_type                     = "FARGATE"
   platform_version                = "LATEST"
@@ -126,11 +108,7 @@ module "boundary_cluster" {
   service_task_execution_role_arn = module.ecs_task_execution_role.iam_role_arn
   service_task_role_arn           = module.ecs_task_role.iam_role_arn
   service_map                     = local.service_map
-  #   service_subnets                 = local.public_subnets
-  #   service_subnets                 = ["subnet-0a9d40af73ef4a12a,subnet-05ffda906b767bdf2,subnet-0a6838be5026ea1cd"]
-  service_subnets         = [for s in data.aws_subnet.private : s.id]
-  service_security_groups = [aws_security_group.ecs_sg.id]
-  #   assign_public_ip                = true
-
-  enable_execute_command = true
+  service_subnets                 = [for s in data.aws_subnet.private : s.id]
+  service_security_groups         = [aws_security_group.ecs_sg.id]
+  enable_execute_command          = true
 }

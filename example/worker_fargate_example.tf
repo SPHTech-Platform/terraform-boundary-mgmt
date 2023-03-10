@@ -9,5 +9,4 @@ module "boundary_cluster" {
   hcp_boundary_cluster_id = "256bed8b-62b8-4e09-a4df-23a79921dc40"
 
   activation_token = "neslat_2KrQ1iTzt1ex7sGk1pmqPDwHT8dB3hjRQnJ5uaJraupsqK5WqJxU1TaoAQQhKtaspvqQcM9qhok3ppYVMaemoz67MpUpC" #checkov:skip=CKV_SECRET_6:Base64 High Entropy String
-  worker_tags      = "example"
 }
