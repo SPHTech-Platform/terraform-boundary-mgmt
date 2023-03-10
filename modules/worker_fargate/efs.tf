@@ -43,8 +43,4 @@ resource "aws_efs_mount_target" "boundary" {
 
 resource "aws_efs_access_point" "boundary" {
   file_system_id = aws_efs_file_system.boundary.id
-  posix_user {
-    uid = 100 # boundary user
-    gid = 100
-  }
 }
