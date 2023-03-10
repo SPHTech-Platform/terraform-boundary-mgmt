@@ -13,5 +13,5 @@ jobs:
     with:
       upload_sarif: false
       # skip_tflint_warn: false
-      default_runner_override_label: self-hosted
-      runner_label: platform-eng
+      # default_runner_override_label: self-hosted
+      # runner_label: platform-eng
