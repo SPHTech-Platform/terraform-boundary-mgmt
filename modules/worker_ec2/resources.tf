@@ -1,6 +1,6 @@
 module "ec2_boundary_worker" {
   source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "4.2.0"
+  version = "~> 4.2.0"
 
   ami                         = var.ami
   associate_public_ip_address = var.pub_enable
