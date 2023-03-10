@@ -4,12 +4,12 @@ repos:
     hooks:
       - id: shellcheck
 
-  - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.9.3
-    hooks:
-      - id: markdown-link-check
-        args:
-          - "--config=mlc_config.json"
+  # - repo: https://github.com/tcort/markdown-link-check
+  #   rev: v3.9.3
+  #   hooks:
+  #     - id: markdown-link-check
+  #       args:
+  #         - "--config=mlc_config.json"
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.72.2

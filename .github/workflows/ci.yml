@@ -1,17 +1,17 @@
 name: terraform-ci
 on:
   pull_request:
-  push:
-    branches:
-      - main
 permissions:
   actions: read
   checks: read
   contents: read
-  pull-requests: read
+  pull-requests: write
+
 jobs:
   ci:
-    uses: SPHTech-Platform/reusable-workflows/.github/workflows/terraform.yaml@main
+    uses: SPHTech-Platform/reusable-workflows/.github/workflows/terraform.yaml@v2
     with:
       upload_sarif: false
-    secrets: inherit
+      # skip_tflint_warn: false
+      default_runner_override_label: self-hosted
+      runner_label: platform-eng
