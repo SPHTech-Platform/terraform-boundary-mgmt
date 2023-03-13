@@ -18,7 +18,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ec2_boundary_worker"></a> [ec2\_boundary\_worker](#module\_ec2\_boundary\_worker) | terraform-aws-modules/ec2-instance/aws | 4.2.0 |
+| <a name="module_ec2_boundary_worker"></a> [ec2\_boundary\_worker](#module\_ec2\_boundary\_worker) | terraform-aws-modules/ec2-instance/aws | ~> 4.2.0 |
 
 ## Resources
 
