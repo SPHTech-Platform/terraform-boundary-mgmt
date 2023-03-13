@@ -31,12 +31,6 @@ variable "activation_token" {
   sensitive   = true
 }
 
-variable "worker_tags" {
-  description = "Tags used to associate boundary worker to target"
-  type        = string
-  default     = ""
-}
-
 variable "boundary_worker_ops_port" {
   description = "Port number for boundary worker (purpose=ops) to expose healthchecks"
   type        = number

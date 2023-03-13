@@ -29,8 +29,7 @@ module "nlb" {
       target_type          = "ip"
       deregistration_delay = 60
       health_check = {
-        enabled = true
-        # interval            = 30
+        enabled             = true
         interval            = 120
         path                = "/health"
         port                = 9203

@@ -41,17 +41,6 @@ data "aws_iam_policy_document" "execution_custom_policy" {
     actions   = ["logs:CreateLogGroup"]
     resources = ["arn:aws:logs:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:log-group:/aws/ecs/${var.name}/*"]
   }
-
-  #   statement {
-  #     actions = [
-  #       "ssm:GetParameter",
-  #       "ssm:GetParameters",
-  #       "ssm:GetParametersByPath"
-  #     ]
-  #     resources = [
-  #       "arn:aws:ssm:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:parameter/sphtech/awedio/*"
-  #     ]
-  #   }
 }
 
 
@@ -100,5 +89,4 @@ data "aws_iam_policy_document" "task_custom_policy" {
 
     resources = ["arn:aws:logs:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:log-group:/aws/ecs/ecs-${var.name}"]
   }
-
 }

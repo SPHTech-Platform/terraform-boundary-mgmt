@@ -3,7 +3,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.38.0 |
 | <a name="requirement_cloudinit"></a> [cloudinit](#requirement\_cloudinit) | 2.2.0 |
 
@@ -52,7 +52,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.38.0 |
 | <a name="requirement_cloudinit"></a> [cloudinit](#requirement\_cloudinit) | 2.2.0 |
 
@@ -67,7 +67,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ec2_boundary_worker"></a> [ec2\_boundary\_worker](#module\_ec2\_boundary\_worker) | terraform-aws-modules/ec2-instance/aws | 4.2.0 |
+| <a name="module_ec2_boundary_worker"></a> [ec2\_boundary\_worker](#module\_ec2\_boundary\_worker) | terraform-aws-modules/ec2-instance/aws | ~> 4.2.0 |
 
 ## Resources
 
