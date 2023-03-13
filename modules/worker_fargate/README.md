@@ -58,7 +58,6 @@
 | <a name="input_service_desired_count"></a> [service\_desired\_count](#input\_service\_desired\_count) | Number of instances of the task definition to place and keep running. | `number` | `0` | no |
 | <a name="input_service_task_cpu"></a> [service\_task\_cpu](#input\_service\_task\_cpu) | Number of cpu units used by the task. If the requires\_compatibilities is FARGATE this field is required. | `number` | `256` | no |
 | <a name="input_service_task_memory"></a> [service\_task\_memory](#input\_service\_task\_memory) | Amount (in MiB) of memory used by the task. If the requires\_compatibilities is FARGATE this field is required. | `number` | `512` | no |
-| <a name="input_worker_tags"></a> [worker\_tags](#input\_worker\_tags) | Tags used to associate boundary worker to target | `string` | `""` | no |
 
 ## Outputs
 
