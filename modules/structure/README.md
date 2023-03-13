@@ -10,7 +10,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | ~> 1.1.2 |
+| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | 1.1.3 |
 
 ## Modules
 

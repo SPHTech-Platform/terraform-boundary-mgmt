@@ -54,10 +54,11 @@ variable "service_task_memory" {
 variable "service_desired_count" {
   description = "Number of instances of the task definition to place and keep running."
   type        = number
-  default     = 0
+  default     = 1
 }
 
 variable "service_container_port" {
   description = " Port on the container to associate with the load balancer."
-  type        = string
+  type        = number
+  default     = 9202
 }

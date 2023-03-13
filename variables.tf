@@ -67,6 +67,7 @@ variable "aws_env" {
 variable "activation_token" {
   description = "activation token, is a one time activation token created via controller"
   type        = string
+  default     = ""
 }
 variable "hcp_boundary_cluster_id" {
   description = "HCP ID"

@@ -11,7 +11,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4.38.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.38.0 |
 | <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.2.0 |
 
 ## Modules
