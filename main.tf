@@ -24,3 +24,10 @@ module "ec2_worker" {
   pub_enable              = var.pub_enable
   worker_tags             = var.worker_tags
 }
+
+module "fargate_worker" {
+  source                  = "./modules/worker_fargate"
+  hcp_boundary_cluster_id = var.hcp_boundary_cluster_id
+  activation_token        = var.activation_token
+  env                     = var.aws_env
+}

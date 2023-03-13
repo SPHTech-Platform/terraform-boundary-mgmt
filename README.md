@@ -14,6 +14,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_ec2_worker"></a> [ec2\_worker](#module\_ec2\_worker) | ./modules/worker_ec2 | n/a |
+| <a name="module_fargate_worker"></a> [fargate\_worker](#module\_fargate\_worker) | ./modules/worker_fargate | n/a |
 | <a name="module_management"></a> [management](#module\_management) | ./modules/management | n/a |
 | <a name="module_structure"></a> [structure](#module\_structure) | ./modules/structure | n/a |
 
@@ -59,6 +60,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_ec2_worker"></a> [ec2\_worker](#module\_ec2\_worker) | ./modules/worker_ec2 | n/a |
+| <a name="module_fargate_worker"></a> [fargate\_worker](#module\_fargate\_worker) | ./modules/worker_fargate | n/a |
 | <a name="module_management"></a> [management](#module\_management) | ./modules/management | n/a |
 | <a name="module_structure"></a> [structure](#module\_structure) | ./modules/structure | n/a |
 
@@ -70,7 +72,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_activation_token"></a> [activation\_token](#input\_activation\_token) | activation token, is a one time activation token created via controller | `string` | n/a | yes |
+| <a name="input_activation_token"></a> [activation\_token](#input\_activation\_token) | activation token, is a one time activation token created via controller | `string` | `""` | no |
 | <a name="input_aws_env"></a> [aws\_env](#input\_aws\_env) | Env | `string` | `"dev"` | no |
 | <a name="input_credential_lib"></a> [credential\_lib](#input\_credential\_lib) | To creates a Credential Lib in the Project | `map(any)` | `{}` | no |
 | <a name="input_credential_store_vault"></a> [credential\_store\_vault](#input\_credential\_store\_vault) | credential\_store\_vault project and vault namespace. A seperate authetication needs to be provided for vault. | `map(any)` | `{}` | no |

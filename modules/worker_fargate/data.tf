@@ -67,7 +67,7 @@ data "aws_iam_policy_document" "task_custom_policy" {
 
     # To remove circular dependency
     #resources = [module.boundary_cluster.ecs_cluster_kms_arn]
-    resources = ["*"]
+    resources = ["*"] #tfsec:ignore:aws-iam-no-policy-wildcards
   }
 
   statement {

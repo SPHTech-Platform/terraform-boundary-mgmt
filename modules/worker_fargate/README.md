@@ -11,8 +11,8 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4.16 |
-| <a name="provider_random"></a> [random](#provider\_random) | ~> 3.2 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.53.0 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.4.3 |
 
 ## Modules
 
@@ -118,8 +118,8 @@ No outputs.
 | <a name="input_env"></a> [env](#input\_env) | Env | `string` | `"dev"` | no |
 | <a name="input_hcp_boundary_cluster_id"></a> [hcp\_boundary\_cluster\_id](#input\_hcp\_boundary\_cluster\_id) | The ID of an HCP Boundary cluster. Setting this allows discovery of upstream addresses for self-managed workers to connect to the cluster. | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the product/project/application | `string` | `"boundary-worker"` | no |
-| <a name="input_service_container_port"></a> [service\_container\_port](#input\_service\_container\_port) | Port on the container to associate with the load balancer. | `string` | n/a | yes |
-| <a name="input_service_desired_count"></a> [service\_desired\_count](#input\_service\_desired\_count) | Number of instances of the task definition to place and keep running. | `number` | `0` | no |
+| <a name="input_service_container_port"></a> [service\_container\_port](#input\_service\_container\_port) | Port on the container to associate with the load balancer. | `number` | `9202` | no |
+| <a name="input_service_desired_count"></a> [service\_desired\_count](#input\_service\_desired\_count) | Number of instances of the task definition to place and keep running. | `number` | `1` | no |
 | <a name="input_service_task_cpu"></a> [service\_task\_cpu](#input\_service\_task\_cpu) | Number of cpu units used by the task. If the requires\_compatibilities is FARGATE this field is required. | `number` | `256` | no |
 | <a name="input_service_task_memory"></a> [service\_task\_memory](#input\_service\_task\_memory) | Amount (in MiB) of memory used by the task. If the requires\_compatibilities is FARGATE this field is required. | `number` | `512` | no |
 
