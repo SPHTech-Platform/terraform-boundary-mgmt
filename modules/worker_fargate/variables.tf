@@ -22,7 +22,7 @@ variable "container_image" {
 variable "hcp_boundary_cluster_id" {
   description = " The ID of an HCP Boundary cluster. Setting this allows discovery of upstream addresses for self-managed workers to connect to the cluster."
   type        = string
-  default     = ""
+  default     = "256bed8b-62b8-4e09-a4df-23a79921dc40"
 }
 
 variable "activation_token" {

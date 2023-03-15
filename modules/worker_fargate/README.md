@@ -116,7 +116,7 @@ No outputs.
 | <a name="input_boundary_worker_ops_port"></a> [boundary\_worker\_ops\_port](#input\_boundary\_worker\_ops\_port) | Port number for boundary worker (purpose=ops) to expose healthchecks | `number` | `9203` | no |
 | <a name="input_container_image"></a> [container\_image](#input\_container\_image) | Image for the Boundary Worker | `string` | `"public.ecr.aws/sphmedia/sphmedia/boundary-worker:latest"` | no |
 | <a name="input_env"></a> [env](#input\_env) | Env | `string` | `"dev"` | no |
-| <a name="input_hcp_boundary_cluster_id"></a> [hcp\_boundary\_cluster\_id](#input\_hcp\_boundary\_cluster\_id) | The ID of an HCP Boundary cluster. Setting this allows discovery of upstream addresses for self-managed workers to connect to the cluster. | `string` | `""` | no |
+| <a name="input_hcp_boundary_cluster_id"></a> [hcp\_boundary\_cluster\_id](#input\_hcp\_boundary\_cluster\_id) | The ID of an HCP Boundary cluster. Setting this allows discovery of upstream addresses for self-managed workers to connect to the cluster. | `string` | `"256bed8b-62b8-4e09-a4df-23a79921dc40"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the product/project/application | `string` | `"boundary-worker"` | no |
 | <a name="input_service_container_port"></a> [service\_container\_port](#input\_service\_container\_port) | Port on the container to associate with the load balancer. | `number` | `9202` | no |
 | <a name="input_service_desired_count"></a> [service\_desired\_count](#input\_service\_desired\_count) | Number of instances of the task definition to place and keep running. | `number` | `1` | no |
