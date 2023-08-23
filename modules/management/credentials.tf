@@ -62,7 +62,7 @@ resource "boundary_credential_store_vault" "this" {
 
 
 resource "boundary_credential_library_vault" "this" {
-  for_each            = var.credential_lib ? var.credential_lib : {}
+  for_each            = var.credential_lib
   name                = each.value.name
   description         = each.value.name
   credential_store_id = boundary_credential_store_vault.this[each.value.project].id
