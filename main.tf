@@ -26,6 +26,7 @@ module "ec2_worker" {
 }
 
 module "fargate_worker" {
+  #checkcov:skip=CKV_AWS_356:"Ensure no IAM policies documents allow "*" as a statement's resource for restrictable actions"
   source                  = "./modules/worker_fargate"
   hcp_boundary_cluster_id = var.hcp_boundary_cluster_id
   activation_token        = var.activation_token
