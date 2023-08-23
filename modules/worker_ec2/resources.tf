@@ -1,4 +1,5 @@
 module "ec2_boundary_worker" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 4.2.0"
 

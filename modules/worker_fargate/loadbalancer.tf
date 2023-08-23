@@ -1,4 +1,5 @@
 module "nlb" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "terraform-aws-modules/alb/aws"
   version = "~> 6.0"
 

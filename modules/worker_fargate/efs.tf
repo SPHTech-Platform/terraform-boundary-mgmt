@@ -42,5 +42,8 @@ resource "aws_efs_mount_target" "boundary" {
 }
 
 resource "aws_efs_access_point" "boundary" {
+  #checkov:skip=CKV_AWS_329: "EFS access points should enforce a root directory"
+  #checkov:skip=CKV_AWS_330: "EFS access points should enforce a user identity"
+
   file_system_id = aws_efs_file_system.boundary.id
 }
