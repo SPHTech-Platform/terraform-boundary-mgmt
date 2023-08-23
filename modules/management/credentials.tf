@@ -1,5 +1,5 @@
 resource "vault_policy" "boundary_controller" {
-  for_each = var.credential_store_vault ? var.credential_store_vault : {}
+  for_each = var.credential_store_vault
   name     = "boundary_controller"
   policy   = <<EOF
   path "auth/token/lookup-self" {
@@ -24,7 +24,7 @@ resource "vault_policy" "boundary_controller" {
 }
 
 resource "vault_policy" "admin_read" {
-  for_each = var.credential_store_vault ? var.credential_store_vault : {}
+  for_each = var.credential_store_vault
   name     = "admin-read"
   policy   = <<EOF
   path "*" {
@@ -35,7 +35,7 @@ resource "vault_policy" "admin_read" {
 
 
 resource "vault_token" "boundary" {
-  for_each          = var.credential_store_vault ? var.credential_store_vault : {}
+  for_each          = var.credential_store_vault
   policies          = [vault_policy.boundary_controller[each.key].name, vault_policy.admin_read[each.key].name]
   no_parent         = true
   no_default_policy = true
@@ -50,7 +50,7 @@ resource "vault_token" "boundary" {
 
 
 resource "boundary_credential_store_vault" "this" {
-  for_each    = var.credential_store_vault ? var.credential_store_vault : {}
+  for_each    = var.credential_store_vault
   name        = "${each.key}-vault-credential-store"
   description = "${each.key}-vault-credential-store"
   address     = var.vault_pub_url
