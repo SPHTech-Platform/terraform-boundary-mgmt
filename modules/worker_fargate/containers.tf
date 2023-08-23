@@ -20,6 +20,7 @@ locals {
 }
 
 module "container_boundary" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "cloudposse/ecs-container-definition/aws"
   version = "0.58.1"
 

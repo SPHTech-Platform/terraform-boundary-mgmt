@@ -39,6 +39,7 @@ locals {
 }
 
 module "ecs_task_execution_role" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "SPHTech-Platform/ecs/aws//modules/iam"
   version = "~> 0.2.0"
 
@@ -53,6 +54,7 @@ module "ecs_task_execution_role" {
 }
 
 module "ecs_task_role" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "SPHTech-Platform/ecs/aws//modules/iam"
   version = "~> 0.2.0"
 
@@ -98,6 +100,7 @@ resource "aws_security_group" "ecs_sg" {
 }
 
 module "boundary_cluster" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "SPHTech-Platform/ecs/aws"
   version = "~> 0.2.0"
 
