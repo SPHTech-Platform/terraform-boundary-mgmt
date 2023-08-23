@@ -53,7 +53,7 @@ No outputs.
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
 | <a name="requirement_boundary"></a> [boundary](#requirement\_boundary) | ~> 1.1.2 |
-| <a name="requirement_vault"></a> [vault](#requirement\_vault) | ~> 3.19.1 |
+| <a name="requirement_vault"></a> [vault](#requirement\_vault) | ~> 3.19.0 |
 
 ## Providers
 
