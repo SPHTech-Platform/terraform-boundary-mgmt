@@ -46,7 +46,6 @@ data "aws_iam_policy_document" "execution_custom_policy" {
 
 data "aws_iam_policy_document" "task_custom_policy" {
   #checkov:skip=CKV_AWS_111: "Ensure IAM policies does not allow write access without constraints"
-
   statement {
     sid = "ECSExecSSM"
 
@@ -56,7 +55,7 @@ data "aws_iam_policy_document" "task_custom_policy" {
       "ssmmessages:OpenControlChannel",
       "ssmmessages:OpenDataChannel"
     ]
-
+    #checkcov:skip=CKV_AWS_356:"Ensure no IAM policies documents allow "*" as a statement's resource for restrictable actions"
     resources = ["*"]
   }
 
