@@ -59,8 +59,8 @@ No outputs.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | 1.1.3 |
-| <a name="provider_vault"></a> [vault](#provider\_vault) | 3.9.1 |
+| <a name="provider_boundary"></a> [boundary](#provider\_boundary) | 1.1.9 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | 3.19.0 |
 
 ## Modules
 
@@ -71,6 +71,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [boundary_credential_library_vault.this](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/credential_library_vault) | resource |
+| [boundary_credential_store_static.this](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/credential_store_static) | resource |
 | [boundary_credential_store_vault.this](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/credential_store_vault) | resource |
 | [boundary_host_catalog_static.this](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/host_catalog_static) | resource |
 | [boundary_host_set_static.this](https://registry.terraform.io/providers/hashicorp/boundary/latest/docs/resources/host_set_static) | resource |
@@ -84,7 +85,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_credential_lib"></a> [credential\_lib](#input\_credential\_lib) | To creates a Credential Lib in the Project | `map(any)` | `{}` | no |
+| <a name="input_credential_lib_vault"></a> [credential\_lib\_vault](#input\_credential\_lib\_vault) | To creates a Vault Credential Lib in the Project | `map(any)` | `{}` | no |
+| <a name="input_credential_store_static"></a> [credential\_store\_static](#input\_credential\_store\_static) | To creates a Static Credential Store in the Project | `map(any)` | `{}` | no |
 | <a name="input_credential_store_vault"></a> [credential\_store\_vault](#input\_credential\_store\_vault) | credential\_store\_vault project and vault namespace. A seperate authetication needs to be provided for vault. | `map(any)` | `{}` | no |
 | <a name="input_projects"></a> [projects](#input\_projects) | Map of project environments inside the org. | `map(any)` | `{}` | no |
 | <a name="input_static_hosts"></a> [static\_hosts](#input\_static\_hosts) | To create a Host Catalog, a Host Set and attach a Host provided inside a Project. | `map(any)` | `{}` | no |

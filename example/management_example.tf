@@ -27,7 +27,7 @@ module "example" {
     },
   }
 
-  credential_lib = {
+  credential_lib_vault = {
     "1" = {
       "project" = "dev"
       "path"    = "example/db/creds/example",

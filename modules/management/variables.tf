@@ -23,8 +23,14 @@ variable "static_hosts" {
 
 }
 
-variable "credential_lib" {
-  description = "To creates a Credential Lib in the Project"
+variable "credential_lib_vault" {
+  description = "To creates a Vault Credential Lib in the Project"
+  type        = map(any)
+  default     = {}
+}
+
+variable "credential_store_static" {
+  description = "To creates a Static Credential Store in the Project"
   type        = map(any)
   default     = {}
 }

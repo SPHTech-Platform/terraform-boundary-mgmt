@@ -53,12 +53,12 @@ resource "boundary_target" "this" {
     for i in boundary_host_set_static.this : i.id if contains(each.value.ss-name, i.name)
   ]
 
-  injected_application_credential_source_ids = [
+  injected_application_credential_source_ids = concat([
     for i in boundary_credential_library_vault.this : i.id if contains(each.value.inj_cred_lib, i.name)
-  ]
-  brokered_credential_source_ids = [
+  ], [for i in boundary_credential_store_static.this : i.id if contains(each.value.inj_cred_lib, i.name)])
+  brokered_credential_source_ids = concat([
     for i in boundary_credential_library_vault.this : i.id if contains(each.value.brk_cred_lib, i.name)
-  ]
+  ], [for i in boundary_credential_store_static.this : i.id if contains(each.value.brk_cred_lib, i.name)])
 
-  worker_filter = "\"${each.value.worker_name}\" in \"/tags/name\""
+  ingress_worker_filter = "\"${each.value.ingress_worker_filter}\" in \"/tags/account\""
 }
