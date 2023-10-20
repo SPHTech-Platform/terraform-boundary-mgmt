@@ -8,7 +8,8 @@ resource "boundary_scope" "org" {
 
 // create project
 resource "boundary_scope" "projects" {
-  for_each                 = toset(var.project_names)
+  for_each = toset(var.project_names)
+
   name                     = each.key
   description              = "Project for ${each.key}"
   scope_id                 = boundary_scope.org.id

@@ -14,7 +14,8 @@ resource "boundary_role" "org_admin" {
 }
 
 resource "boundary_role" "proj_admin" {
-  for_each       = toset(var.project_names)
+  for_each = toset(var.project_names)
+
   name           = "${var.org_name}-${each.key}-role"
   scope_id       = boundary_scope.org.id
   grant_scope_id = boundary_scope.projects[each.key].id
