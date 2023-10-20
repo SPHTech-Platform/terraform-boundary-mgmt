@@ -1,7 +1,8 @@
 resource "vault_policy" "boundary_controller" {
   for_each = var.credential_store_vault
-  name     = "boundary_controller"
-  policy   = <<EOF
+
+  name   = "boundary_controller"
+  policy = <<EOF
   path "auth/token/lookup-self" {
   capabilities = ["read"]
   }
@@ -25,8 +26,9 @@ resource "vault_policy" "boundary_controller" {
 
 resource "vault_policy" "admin_read" {
   for_each = var.credential_store_vault
-  name     = "admin-read"
-  policy   = <<EOF
+
+  name   = "admin-read"
+  policy = <<EOF
   path "*" {
     capabilities = ["read"]
   }
@@ -35,7 +37,8 @@ resource "vault_policy" "admin_read" {
 
 
 resource "vault_token" "boundary" {
-  for_each          = var.credential_store_vault
+  for_each = var.credential_store_vault
+
   policies          = [vault_policy.boundary_controller[each.key].name, vault_policy.admin_read[each.key].name]
   no_parent         = true
   no_default_policy = true
@@ -50,7 +53,8 @@ resource "vault_token" "boundary" {
 
 
 resource "boundary_credential_store_vault" "this" {
-  for_each    = var.credential_store_vault
+  for_each = var.credential_store_vault
+
   name        = "${each.key}-vault-credential-store"
   description = "${each.key}-vault-credential-store"
   address     = var.vault_pub_url
@@ -62,7 +66,8 @@ resource "boundary_credential_store_vault" "this" {
 
 
 resource "boundary_credential_library_vault" "this" {
-  for_each            = var.credential_lib_vault
+  for_each = var.credential_lib_vault
+
   name                = each.value.name
   description         = each.value.name
   credential_store_id = boundary_credential_store_vault.this[each.value.project].id
@@ -72,7 +77,8 @@ resource "boundary_credential_library_vault" "this" {
 }
 
 resource "boundary_credential_store_static" "this" {
-  for_each    = var.credential_store_static
+  for_each = var.credential_store_static
+
   name        = "${each.value.name}-static-credential-store"
   description = "${each.key} scoped static credential store"
   scope_id    = lookup(var.projects, each.key).id
