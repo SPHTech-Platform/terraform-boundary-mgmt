@@ -102,7 +102,7 @@ resource "aws_security_group" "ecs_sg" {
 module "boundary_cluster" {
   #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "SPHTech-Platform/ecs/aws"
-  version = "~> 0.2.0"
+  version = "0.2.20"
 
   name                            = var.name
   launch_type                     = "FARGATE"
